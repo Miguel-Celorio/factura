@@ -1,7 +1,7 @@
 import java.util.Vector;
 
 public class Factura {
-    private Vector<Producto> productos;
+    private Vector<Producto> productos = new Vector<>();
 
     public void meterProducto(Producto p){
         productos.add(p);
@@ -18,6 +18,6 @@ public class Factura {
     }
 
     public float aplicarIva(float iva){
-        return  totalFactura() + totalFactura() * 0.21f;
+        return  totalFactura() + totalFactura() * iva;
     }
 }
